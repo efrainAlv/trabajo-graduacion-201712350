@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+
+  python:
+    build: .
+    image: python-client
+    container_name: client-server
+    ports:
+      - 8083:8083
+    volumes:
+      - ./src:/user/src/app

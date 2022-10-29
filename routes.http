@@ -1,0 +1,40 @@
+### SEND MESSAGE
+POST http://localhost:8080/send
+Content-Type: application/json
+
+{
+    "current_time":100,
+	"symbol":"SOL",
+	"price":"1200"
+}
+
+
+### GET LAST PRICE
+GET http://localhost:8080/getPrice
+
+
+
+### GET ARIMA FORECAST
+POST http://localhost:8083/forecast/arima
+Content-Type: application/json
+
+{
+    "periods":10
+}
+
+
+
+### GET LAST PRICE
+POST http://localhost:9090/getPrice
+Content-Type: application/json
+
+{
+    "time_period_start": "123123",
+	"time_period_end": "asd",
+	"time_open": "12312333",
+	"time_close": "weq",
+	"rate_open": "dasdqwe",
+	"rate_high": "asdasg24324",
+	"rate_low": "asd",
+	"rate_close": "2342asda"
+}

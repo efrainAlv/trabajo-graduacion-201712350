@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+
+  producer:
+    build: .
+    image: golang-kafka:producer
+    container_name: kafka-producer
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/user/src/app
+    networks:
+      - default
+    # command: bash -c "go get -u github.com/gocolly/colly/..."
+    # command: bash -c "go mod init kafka"
+    # command: bash -c "go get github.com/gin-gonic/gin && go get github.com/joho/godotenv && go get github.com/segmentio/kafka-go"
+
+networks:
+  default:
+    name: kafka_default
+    external: true
